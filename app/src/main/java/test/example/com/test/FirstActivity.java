@@ -23,12 +23,12 @@ public class FirstActivity extends BaseActivity {
         button1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-  //              String data="Hello SecondActivity";
-//                Intent intent = new Intent(FirstActivity.this,SecondActivity.class);
-//                intent.putExtra("extra_data",data);
-   //             Toast.makeText(FirstActivity.this,"login successful", Toast.LENGTH_SHORT).show();
-                SecondActivity.actionStart(FirstActivity.this,"data1","data2");
-//                startActivity(intent);
+                String data="Hello SecondActivity";
+                Intent intent = new Intent(FirstActivity.this,SecondActivity.class);
+                intent.putExtra("extra_data",data);
+                Toast.makeText(FirstActivity.this,"login successful", Toast.LENGTH_SHORT).show();
+             //   SecondActivity.actionStart(FirstActivity.this,"data1","data2");
+               startActivity(intent);
             }
         });
 

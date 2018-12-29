@@ -17,7 +17,7 @@ public class SecondActivity extends BaseActivity {
         Log.d("SecondActivity","Task id is"+getTaskId());
         setContentView(R.layout.second_layout);
        Intent intent =getIntent();
-       String data=intent.getStringExtra("param1");
+       String data=intent.getStringExtra("extra_data");
         Log.d("SecondActivity",data);
 
         Button button2 = (Button) findViewById(R.id.button_2);
@@ -27,14 +27,15 @@ public class SecondActivity extends BaseActivity {
                 Intent intent1 = new Intent("test.example.com.test.VIEW");
                 intent1.setData(Uri.parse("http://www.baidu.com"));
                 startActivity(intent1);
+                System.out.println("follow me!");
             }
         });
     }
 
-    public static void actionStart(Context context,String data1,String data2){
-        Intent intent = new Intent(context,SecondActivity.class);
-        intent.putExtra("param1",data1);
-        intent.putExtra("param2",data2);
-        context.startActivity(intent);
-    }
+//    public static void actionStart(Context context,String data1,String data2){
+//        Intent intent = new Intent(context,SecondActivity.class);
+//        intent.putExtra("param1",data1);
+//        intent.putExtra("param2",data2);
+//        context.startActivity(intent);
+//    }
 }
